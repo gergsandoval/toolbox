@@ -1,0 +1,8 @@
+version: "3.9"
+services:  
+    jmeter:
+        image: justb4/jmeter:5.4
+        volumes:
+            - ./:/opt/apache-jmeter-5.4.2/bin/toolbox
+        command: 
+            - -n -t bin/toolbox/test.jmx
